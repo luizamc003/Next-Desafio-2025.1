@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col w-full lg:justify-center border-t-4 border-secondary-pink  text-gray text-base text-center lg:text-start">
-      <div className="flex justify-between items-start w-full px-8 xl:px-16 py-1">
+    <div className="flex flex-col w-full lg:justify-center border-t-4 items-center border-secondary-pink  text-gray text-base text-center lg:text-start">
+      <div className="flex justify-between items-start w-full lg:max-w-[1440px] px-3 lg:px-8 xl:px-16 py-1 ">
         <div className="w-full flex flex-col lg:flex-row lg:justify-between py-5 m-auto lg:gap-10">
           <div className="flex w-full flex-col pb-10 lg:pb-0 flex-1">
             <h1 className="font-semibold pb-4 text-dark">SOCIAL</h1>
@@ -31,12 +31,12 @@ export default function Footer() {
             <Image
               src="/logo/beleza-express-logo.png"
               alt="logo"
-              width={500}
-              height={300}
+              width={400}
+              height={200}
             />
           </div>
 
-          <div className="flex w-full flex-col pb-10 lg:pb-0 flex-1">
+          <div className="flex w-full flex-col pb-10 lg:pb-0 flex-1 lg:text-end">
             <div className="flex lg:items-end flex-col">
               <h1 className="font-semibold pb-4 text-dark">
                 ATENDIMENTO AO CLIENTE
@@ -53,14 +53,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col justify-center gap-4 pb-5 lg:pb-0 lg:border-none md:justify-center ">
                 <p className="font-semibold text-dark">SEGURANÇA</p>
-                <div className="flex gap-2 lg:gap-5 item">
-                  <Image
-                    src="https://lowell.fbitsstatic.net/sf/img/footer/ssl.svg?theme=main&v=202502171649"
-                    alt="ssl"
-                    width={47}
-                    height={32}
-                    className="w-[80px]"
-                  />
+                <div className="flex gap-2 lg:gap-5 items-center justify-center md:justify-end">
                   <Image
                     src="/footer/google_site_seguro.png"
                     alt="google"
@@ -69,11 +62,10 @@ export default function Footer() {
                     className="h-[56px] w-auto"
                   />
                   <Image
-                    src="https://lowell.fbitsstatic.net/sf/img/footer/seguranca.svg?theme=main&v=202502171649"
+                    src="/footer/selo_ssl.png"
                     alt="seguranca"
-                    width={55}
-                    height={25}
-                    className="w-[80px]"
+                    width={82}
+                    height={36}
                   />
                 </div>
               </div>
