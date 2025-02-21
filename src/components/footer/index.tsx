@@ -31,7 +31,7 @@ export default function Footer() {
             <Image
               src="/logo/beleza-express-logo.png"
               alt="logo"
-              width={400}
+              width={356}
               height={200}
             />
           </div>

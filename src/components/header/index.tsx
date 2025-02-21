@@ -1,5 +1,13 @@
+import SearchHeader from "./search-header";
 import Topbar from "./topbar";
 
 export default function Header() {
-  return <Topbar />;
+  return (
+    <div>
+      <Topbar />
+      <div>
+        <SearchHeader />
+      </div>
+    </div>
+  );
 }
