@@ -53,7 +53,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col justify-center gap-4 pb-5 lg:pb-0 lg:border-none md:justify-center ">
                 <p className="font-semibold text-dark">SEGURANÇA</p>
-                <div className="flex gap-2 lg:gap-5 items-center justify-center md:justify-end">
+                <div className="flex gap-2 lg:gap-5 items-center justify-center lg:justify-end">
                   <Image
                     src="/footer/google_site_seguro.png"
                     alt="google"
