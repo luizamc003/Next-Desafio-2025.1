@@ -1,6 +1,6 @@
 export default function SearchHeader() {
   return (
-    <div className="flex items-center w-full border-b-2 border-primary-pink m-1 lg:w-[500px] xl:w-[350px] px-4 md:px-0">
+    <div className="flex items-center justify border-b-2 w-[400px] border-primary-pink m-1 lg:w-[500px]px-4 md:px-0">
       <input
         id="search-bar"
         className="w-full text-[20px] placeholder:text-xs pt-0 pb-1 lg:mx-0 lg:px-5 placeholder:text-gray-2000 lg:border-b-0 border-none outline-none"
