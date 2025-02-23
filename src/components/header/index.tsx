@@ -42,7 +42,7 @@ export default function Header() {
               <div className="flex flex-col items-center lg:items-start">
                 <span>Olá visitante</span>
                 <span className="text-sm text-dark-light">
-                  Faça o <a href="">login</a> ou <a href="">cadastra-se</a>
+                  Faça o <a href="">login</a> ou <a href="">cadastre-se</a>
                 </span>
               </div>
               <div className="flex justify-center items-center">
