@@ -14,9 +14,9 @@ export default function Header() {
     <div>
       <Topbar />
       <div className="flex justify-center w-full">
-        <div className="flex flex-col items-center lg:flex-row lg: lg:w-full w-full space-x-4lg:px-7 lg:max-w-[1440px]">
-          <div className="flex w-full justify-between  items-center px-3 lg:justify-start border-b-2 border-primary-pink lg:border-hidden">
-            <div className="lg:hidden">
+        <div className="flex flex-col items-center md:flex-row md: md:w-full w-full space-x-4md:px-7 md:max-w-[1440px]">
+          <div className="flex w-full justify-between  items-center px-3 md:justify-start border-b-2 border-primary-pink md:border-hidden">
+            <div className="md:hidden">
               <Menu />
             </div>
             <Image
@@ -26,26 +26,26 @@ export default function Header() {
               height={100}
             />
 
-            <div className="lg:hidden">
+            <div className="md:hidden">
               <a href="">
                 <ShoppingBagOutlined style={{ fontSize: 35 }} />
               </a>
             </div>
           </div>
-          <div className="flex justify-center items-center lg:justify-center lg:flex-grow">
+          <div className="flex justify-center items-center md:justify-center md:flex-grow">
             <SearchHeader />
           </div>
 
-          <div className="lg:flex justify-center items-center w-full space-x-4 hidden">
+          <div className="md:flex justify-center items-center w-full space-x-4 hidden md:space-x-1">
             <PersonOutlineOutlined style={{ fontSize: 30 }} />
-            <div className="flex justify-between items-center lg:items-end lg:space-x-10">
-              <div className="flex flex-col items-center lg:items-start">
+            <div className="flex justify-between items-center md:space-x-10">
+              <div className="flex flex-col items-center md:items-start">
                 <span>Olá visitante</span>
                 <span className="text-sm text-dark-light">
                   Faça o <a href="">login</a> ou <a href="">cadastre-se</a>
                 </span>
               </div>
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center ">
                 <a href="">
                   <ShoppingBagOutlined style={{ fontSize: 35 }} />
                 </a>
@@ -55,7 +55,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <Navbar />
       </div>
     </div>

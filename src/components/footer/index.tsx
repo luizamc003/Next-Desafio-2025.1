@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col w-full lg:justify-center border-t-4 items-center border-secondary-pink  text-gray text-base text-center lg:text-start">
-      <div className="flex justify-between items-start w-full lg:max-w-[1440px] lg:px-8 py-1 ">
-        <div className="w-full flex flex-col lg:flex-row lg:justify-between py-5 m-auto lg:gap-10">
-          <div className="flex w-full flex-col lg:pb-0 flex-1">
+    <div className="flex flex-col w-full md:justify-center border-t-4 items-center border-secondary-pink  text-gray text-base text-center md:text-start">
+      <div className="flex justify-between items-start w-full md:max-w-[1440px] md:px-8 py-1 ">
+        <div className="w-full flex flex-col md:flex-row md:justify-between py-5 m-auto md:gap-10">
+          <div className="flex w-full flex-col md:pb-0 flex-1">
             <h1 className="font-semibold pb-4 text-dark">SOCIAL</h1>
             <div className="flex flex-col gap-2">
               <a href="">Facebook</a>
               <a href="">Instagram</a>
               <a href="">Twitter</a>
             </div>
-            <div className="flex w-full flex-col justify-center items-center lg:items-start lg:pb-0">
+            <div className="flex w-full flex-col justify-center items-center md:items-start md:pb-0">
               <h1 className="font-semibold pb-4 mt-4 text-dark">
                 FORMAS DE PAGAMENTO
               </h1>
@@ -36,8 +36,8 @@ export default function Footer() {
             />
           </div>
 
-          <div className="flex w-full flex-col lg:pb-0 flex-1 lg:text-end">
-            <div className="flex lg:items-end flex-col">
+          <div className="flex w-full flex-col md:pb-0 flex-1 md:text-end">
+            <div className="flex md:items-end flex-col">
               <h1 className="font-semibold pb-4 text-dark">
                 ATENDIMENTO AO CLIENTE
               </h1>
@@ -51,9 +51,9 @@ export default function Footer() {
                   36020-280, Brasil
                 </p>
               </div>
-              <div className="flex flex-col justify-center gap-4 pb-5 lg:pb-0 lg:border-none md:justify-center ">
+              <div className="flex flex-col justify-center gap-4 pb-5 md:pb-0 md:border-none md:justify-center ">
                 <p className="font-semibold text-dark">SEGURANÇA</p>
-                <div className="flex gap-2 lg:gap-5 items-center justify-center lg:justify-end">
+                <div className="flex gap-2 md:gap-5 items-center justify-center md:justify-end">
                   <Image
                     src="/footer/google_site_seguro.png"
                     alt="google"
@@ -75,8 +75,8 @@ export default function Footer() {
       </div>
 
       <div className="w-full">
-        <div className="flex justify-center items-center lg:flex-row py-1 bg-secondary-pink">
-          <p className="text-center order-3 lg:order-1 text-danger w-full">
+        <div className="flex justify-center items-center md:flex-row py-1 bg-secondary-pink">
+          <p className="text-center order-3 md:order-1 text-danger w-full">
             © Beleza Express - Todos direitos reservados
           </p>
         </div>
