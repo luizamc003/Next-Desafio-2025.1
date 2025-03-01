@@ -8,7 +8,7 @@ const ClientSlider = dynamic(() => import("./client-slider"), {
 
 export default function Slider() {
   return (
-    <div>
+    <div className="py-8">
       <ClientSlider />
     </div>
   );
