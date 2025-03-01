@@ -5,7 +5,7 @@ export default function SingleProduct() {
   return (
     <Link
       href={"/"}
-      className="flex justify-center items-center p-1 border-2 border-secondary-pink w-40  sm:w-60 md:p-2 lg:transform lg:hover:scale-105 lg:duration-300"
+      className="flex justify-center items-center p-1 border-2 border-secondary-pink w-44   sm:w-60 md:p-2 lg:transform lg:hover:scale-105 lg:duration-300"
     >
       <div className="flex justify-center items-center flex-col w-full ">
         <Image
