@@ -6,11 +6,12 @@ export default function Search() {
       <div className="w-[60%] border-2 rounded-3xl overflow-hidden h-9 flex justify-center items-center border-primary-pink bg-slate-50 pr-3">
         <input
           type="text"
-          className="w-full px-3 border-none outline-none bg-slate-50"
+          placeholder="Busca"
+          className="w-full px-3 border-none outline-none bg-slate-50 text-primary-pink placeholder-primary-pink"
         />
 
         <button>
-          <SearchRounded className="text-primary-pink" />
+          <SearchRounded className="text-primary-pink text-3xl" />
         </button>
       </div>
     </div>

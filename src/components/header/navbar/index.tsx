@@ -2,9 +2,9 @@ import Link from "next/link";
 import { ManageAccountsOutlined } from "@mui/icons-material";
 
 const links = [
-  { href: "/home", label: "Home" },
-  { href: "/produtos", label: "Produtos" },
-  { href: "/contato", label: "Contato" },
+  { href: "/", label: "Home" },
+  { href: "/posts", label: "Produtos" },
+  { href: "/contact", label: "Contato" },
   { href: "/login", label: "Login" },
 ];
 
