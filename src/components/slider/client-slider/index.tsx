@@ -8,6 +8,11 @@ import { Navigation, Pagination } from "swiper/modules";
 import SingleProduct from "@/components/single-product";
 import { CSSProperties } from "react";
 
+// Import Swiper styles
+import "swiper/css";
+
+import "../style.css";
+
 export default function ClientSlider() {
   const data = [
     { id: 1, product: <SingleProduct /> },
@@ -18,38 +23,24 @@ export default function ClientSlider() {
   ];
 
   return (
-    <div className="w-[95%] mx-auto lg:w-[85%]">
-      <Swiper
-        slidesPerView={2}
-        navigation
-        pagination={{ clickable: true }}
-        modules={[Navigation, Pagination]}
-        breakpoints={{
-          1024: { slidesPerView: 4 },
-          640: { slidesPerView: 3 },
-          320: { slidesPerView: 2 },
-        }}
-        style={
-          {
-            "--swiper-navigation-size": "30px",
-          } as CSSProperties
-        }
-      >
-        {data.map((item) => (
-          <SwiperSlide
-            key={item.id}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "10px",
-              padding: "10px",
-            }}
-          >
-            {item.product}
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className="w-full flex justify-center">
+      <div className=" w-full lg:w-[90%] flex justify-center items-center">
+        <Swiper
+          className="customSwiper"
+          slidesPerView={2}
+          navigation
+          pagination={{ clickable: true }}
+          modules={[Navigation, Pagination]}
+          breakpoints={{
+            1260: { slidesPerView: 4 },
+            760: { slidesPerView: 3 },
+          }}
+        >
+          {data.map((item) => (
+            <SwiperSlide key={item.id}>{item.product}</SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 }

@@ -16,7 +16,9 @@ export default function Home() {
       <HeroSection /> <InformationBar />{" "}
       <div className="flex justify-center flex-col my-8">
         <TitleSlider title="TITULO" />
-        <Slider />
+        <div className="w-full">
+          <Slider />
+        </div>
         <div className="w-full flex justify-center items-center pb-4">
           <span className="font-semibold md:text-3xl text-2xl">
             Nossa essência
