@@ -16,7 +16,9 @@ export default function Home() {
     <div>
       <HeroSection /> <InformationBar />{" "}
       <div className="flex justify-center flex-col my-8">
-        <span className="font-semibold text-2xl px-4">NOSSOS PRODUTOS</span>
+        <span className="font-semibold text-2xl px-4 flex justify-center iemns-center">
+          NOSSOS PRODUTOS
+        </span>
         <Slider />
         <TitleSlider title="TITULO" />
         <div className="w-full">
@@ -28,7 +30,7 @@ export default function Home() {
           </span>
         </div>
         <ValuesContainer />
-        <div className="flex justify-between items-center px-24 py-10 ">
+        <div className="hidden md:flex justify-between items-center px-24 py-10">
           <Image
             src="/landing-page/make-img3.png"
             alt="Modelo 1"
