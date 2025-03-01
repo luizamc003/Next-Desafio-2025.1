@@ -23,8 +23,8 @@ export default function ClientSlider() {
   ];
 
   return (
-    <div className="w-full flex justify-center">
-      <div className=" w-full lg:w-[90%] flex justify-center items-center">
+    <div className="w-full flex justify-center h-fit">
+      <div className="w-full lg:w-[90%] flex justify-center items-center lg:h-[500px]">
         <Swiper
           className="customSwiper"
           slidesPerView={2}

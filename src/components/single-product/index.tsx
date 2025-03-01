@@ -1,8 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SingleProduct() {
   return (
-    <div className="flex justify-center items-center p-1 border-2 border-secondary-pink w-40 sm:w-60 md:p-2">
+    <Link
+      href={"/"}
+      className="flex justify-center items-center p-1 border-2 border-secondary-pink w-40  sm:w-60 md:p-2 lg:transform lg:hover:scale-105 lg:duration-300"
+    >
       <div className="flex justify-center items-center flex-col w-full ">
         <Image
           src="/single-product/example-product.png"
@@ -31,6 +35,6 @@ export default function SingleProduct() {
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
