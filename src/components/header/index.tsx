@@ -8,6 +8,7 @@ import {
   Menu,
 } from "@mui/icons-material";
 import Navbar from "./navbar";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -19,12 +20,14 @@ export default function Header() {
             <div className="md:hidden">
               <Menu />
             </div>
-            <Image
-              src="/logo/beleza-express-logo.png"
-              alt="logo"
-              width={200}
-              height={100}
-            />
+            <Link href={"/"}>
+              <Image
+                src="/logo/beleza-express-logo.png"
+                alt="logo"
+                width={200}
+                height={100}
+              />
+            </Link>
 
             <div className="md:hidden">
               <a href="">

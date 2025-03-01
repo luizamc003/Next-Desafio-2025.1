@@ -2,6 +2,7 @@ import Link from "next/link";
 import TopNavegation from "../top-navegation";
 import SingleProduct from "../single-product";
 import NewsletterSection from "../newsletter-section";
+import Search from "./search";
 
 export default function Posts() {
   const linksProducts = [
@@ -14,6 +15,7 @@ export default function Posts() {
       <div>
         <TopNavegation links={linksProducts} />
       </div>
+      <Search />
       <div className="w-full px-6 md:px-11">
         <h1 className="  text-3xl text-dark font-extrabold">PRODUTOS</h1>
       </div>

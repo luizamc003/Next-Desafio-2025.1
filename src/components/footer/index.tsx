@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -27,14 +28,16 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex justify-center items-center ">
-            <Image
-              src="/logo/beleza-express-logo.png"
-              alt="logo"
-              width={356}
-              height={200}
-            />
-          </div>
+          <Link href={"/"}>
+            <div className="flex justify-center items-center ">
+              <Image
+                src="/logo/beleza-express-logo.png"
+                alt="logo"
+                width={356}
+                height={200}
+              />
+            </div>
+          </Link>
 
           <div className="flex w-full flex-col md:pb-0 flex-1 md:text-end">
             <div className="flex md:items-end flex-col">
