@@ -1,0 +1,45 @@
+import Image from "next/image";
+
+export default function Login() {
+  return (
+    <div className="flex justify-center items-center bg-gradient-to-tr from-primary-pink to-secondary-pink py-10">
+      <div className="flex justify-center items-center flex-col bg-[#FFFFFF] w-[75%] px-5 py-10 rounded-3xl">
+        <Image
+          src="/logo/beleza-express-logo.png"
+          alt="logo"
+          height={135}
+          width={246}
+          className="p-4"
+        />
+        <div className="w-full flex flex-col gap-3">
+          <div className="flex justify-start items-center border-2 border-primary-pink rounded h-10">
+            <input
+              type="text"
+              placeholder="Email *"
+              className=" text-sm w-full px-3 outline-none border-none text-gray"
+            />
+          </div>
+          <div className="flex justify-start items-center w-full border-2 border-primary-pink rounded h-10">
+            <input
+              type="text"
+              placeholder="Nome *"
+              className=" text-sm w-full px-3 outline-none border-none text-gray"
+            />
+          </div>
+          <div className="flex justify-start items-center w-full border-2 border-primary-pink rounded h-10">
+            <input
+              type="password"
+              placeholder="Senha *"
+              className=" text-sm w-full px-3 outline-none border-none text-gray"
+            />
+          </div>
+          <div className="flex items-center justify-center py-1 sm:py-3 w-full">
+            <button className="bg-[#DD2D4A] text-white font-semibold px-9 py-2  md:px-9 md:py-2 sm:py-2 rounded text-base sm:text-base  ">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

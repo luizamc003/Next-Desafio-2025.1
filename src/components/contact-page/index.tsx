@@ -1,3 +1,4 @@
+import ButtonGradient from "../buttons/button-gradient";
 import TopNavegation from "../top-navegation";
 import {
   EmailOutlined,
@@ -58,11 +59,7 @@ export default function Contact() {
               <textarea className="px-2 w-full border-none outline-none bg-primary-pink text-white font-semibold h-full"></textarea>
             </div>
           </div>
-          <div className="flex items-center justify-center py-2 sm:py-3 w-full">
-            <button className="bg-primary-pink text-white font-semibold px-4 py-1 sm:px-6 sm:py-2 rounded text-xs sm:text-base transition duration-300 ease-in-out transform hover:bg-gradient-to-r hover:from-primary-pink hover:to-secondary-pink hover:scale-105">
-              Enviar
-            </button>
-          </div>
+          <ButtonGradient buttonText="Enviar" />
         </div>
       </div>
 
