@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
+import { HomeMiniOutlined, HomeOutlined } from "@mui/icons-material";
 
 export default function Login() {
   return (
     <div className="flex justify-center items-center bg-gradient-to-tr from-primary-pink to-secondary-pink py-10">
-      <div className="flex justify-center items-center flex-col bg-[#FFFFFF] w-[75%] px-5 py-10 rounded-3xl">
+      <div className="flex justify-center items-center flex-col bg-[#FFFFFF] w-[75%] px-5 py-10 rounded-3xl md:w-[45%]">
         <Image
           src="/logo/beleza-express-logo.png"
           alt="logo"
@@ -11,7 +13,7 @@ export default function Login() {
           width={246}
           className="p-4"
         />
-        <div className="w-full flex flex-col gap-3">
+        <div className="w-full flex flex-col gap-3 lg:px-24 md:px-12">
           <div className="flex justify-start items-center border-2 border-primary-pink rounded h-10">
             <input
               type="text"
@@ -38,6 +40,20 @@ export default function Login() {
               Login
             </button>
           </div>
+          <div className="flex justify-center items-center">
+            <span>ou</span>
+            <span className="mx-1"></span>
+            <Link href={"/login"} className="text-primary-pink underline">
+              cadastre-se
+            </Link>
+          </div>
+          <Link
+            href={"/"}
+            className="flex justify-center items-center flex-row gap-1 opacity-40"
+          >
+            <HomeOutlined className="text-3xl" />
+            <span>Home</span>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer";
 import Header from "@/components/header";
-
+import LayoutWrapper from "@/components/layout-wrapper";
 const inter = Inter({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   style: "normal",
@@ -13,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Desafio Next.JS 2024.2",
   description:
-    "Desafio Next.JS, Typescript, Tailinwd, Prisma, semestre 2024.2 para todos os membros da Code JR",
+    "Desafio Next.JS, Typescript, Tailwind, Prisma, semestre 2024.2 para todos os membros da Code JR",
 };
 
 export default function RootLayout({
@@ -25,9 +24,8 @@ export default function RootLayout({
     <html lang="pt">
       <body className={inter.className}>
         <Header />
-        {children}
-
-        <Footer />
+        <LayoutWrapper>{children}</LayoutWrapper>{" "}
+        {/* Usa o wrapper para condicionar o Footer */}
       </body>
     </html>
   );
