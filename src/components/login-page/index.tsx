@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HomeMiniOutlined, HomeOutlined } from "@mui/icons-material";
+import { HomeOutlined } from "@mui/icons-material";
 
 export default function Login() {
   return (
@@ -36,9 +36,12 @@ export default function Login() {
             />
           </div>
           <div className="flex items-center justify-center py-1 sm:py-3 w-full">
-            <button className="bg-[#DD2D4A] text-white font-semibold px-9 py-2  md:px-9 md:py-2 sm:py-2 rounded text-base sm:text-base  ">
+            <Link
+              href={"/admin"}
+              className="bg-[#DD2D4A] text-white font-semibold px-9 py-2  md:px-9 md:py-2 sm:py-2 rounded text-base sm:text-base  "
+            >
               Login
-            </button>
+            </Link>
           </div>
           <div className="flex justify-center items-center">
             <span>ou</span>
