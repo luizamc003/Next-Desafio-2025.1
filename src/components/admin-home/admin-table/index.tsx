@@ -5,6 +5,7 @@ import {
   EditOutlined,
   DeleteOutlineOutlined,
 } from "@mui/icons-material";
+import { DeleteButton, EditButton, ViewButton } from "@/components/buttons";
 
 export default function AdminTable() {
   return (
@@ -60,15 +61,9 @@ export default function AdminTable() {
           <span>4100,00</span>
         </span>
         <span className="w-[28%] md:w-[12%] text-center text-dark-light flex justify-between">
-          <Link href={"/admin"}>
-            <VisibilityOutlined />
-          </Link>
-          <Link href={"/admin"}>
-            <EditOutlined />
-          </Link>
-          <Link href={"/admin"}>
-            <DeleteOutlineOutlined />
-          </Link>
+          <ViewButton id={1} />
+          <EditButton id={1} />
+          <DeleteButton id={1} />
         </span>
       </div>
     </div>

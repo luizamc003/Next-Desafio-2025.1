@@ -23,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={inter.className}>
-        <Header />
         <LayoutWrapper>{children}</LayoutWrapper>{" "}
         {/* Usa o wrapper para condicionar o Footer */}
       </body>

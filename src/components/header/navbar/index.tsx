@@ -19,7 +19,7 @@ export default function Navbar() {
             </span>
           </Link>
         ))}
-        <a href="">
+        <a href="/login">
           <ManageAccountsOutlined
             style={{ color: "whitesmoke", fontSize: 30 }}
           />

@@ -1,4 +1,4 @@
-import ButtonGradient from "../buttons/button-gradient";
+import { ButtonGradient } from "../buttons";
 import TopNavegation from "../top-navegation";
 import {
   EmailOutlined,
