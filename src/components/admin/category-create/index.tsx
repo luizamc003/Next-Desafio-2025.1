@@ -13,7 +13,7 @@ export default function Category() {
             className="bg-slate-300 rounded-3xl w-full outline-none px-3 h-7"
           />
         </div>
-        <div className="flex justify-between items-center w-1/2">
+        <div className="flex w-full justify-between flex-row items-center md:w-1/2">
           <ButtonGradient buttonText="Criar" />
           <ButtonGradient buttonText="Cancelar" />
         </div>

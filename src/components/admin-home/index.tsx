@@ -24,7 +24,7 @@ export default function Admin() {
             </div>
             <div className="flex text-slate-700 w-full justify-center items-center">
               <Link
-                href={"/admin"}
+                href={"/admin/manage/product/create"}
                 className="w-full flex justify-center items-center"
               >
                 <AddBoxOutlined className="text-4xl" />
