@@ -7,6 +7,7 @@ import Link from "next/link";
 
 interface ButtonGradientProps {
   buttonText: string;
+  onClick?: () => void;
 }
 
 export function ButtonGradient({ buttonText }: ButtonGradientProps) {
@@ -21,7 +22,7 @@ export function ButtonGradient({ buttonText }: ButtonGradientProps) {
 
 export function EditButton({ id }: { id: number }) {
   return (
-    <Link href={`/admin/manage/edit${id}`}>
+    <Link href={`/admin/manage/edit?${id}`}>
       <EditOutlined />
     </Link>
   );
@@ -29,7 +30,7 @@ export function EditButton({ id }: { id: number }) {
 
 export function DeleteButton({ id }: { id: number }) {
   return (
-    <Link href={`/admin/manage/delete${id}`}>
+    <Link href={`/admin/manage/delete?${id}`}>
       <DeleteOutlineOutlined />
     </Link>
   );
@@ -37,7 +38,7 @@ export function DeleteButton({ id }: { id: number }) {
 
 export function ViewButton({ id }: { id: number }) {
   return (
-    <Link href={`/admin/manage/view${id}`}>
+    <Link href={`/admin/manage/view?${id}`}>
       <VisibilityOutlined />
     </Link>
   );

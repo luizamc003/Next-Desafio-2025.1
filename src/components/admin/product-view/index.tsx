@@ -1,8 +1,9 @@
 import { ButtonGradient } from "@/components/buttons";
 import Link from "next/link";
 import { HomeOutlined } from "@mui/icons-material";
+import Image from "next/image";
 
-export default function ProductCreate() {
+export default function ProductView() {
   return (
     <div className="flex justify-center items-center py-10">
       <form className="flex justify-center items-center flex-col gap-3 bg-[#FFFFFF] w-[95%] px-5 py-10 md:w-[90%] lg:w-[75%] rounded-3xl ">
@@ -16,6 +17,14 @@ export default function ProductCreate() {
             <HomeOutlined className="md:text-2xl" />
             <span>Home</span>
           </Link>
+        </div>
+        <div className="flex justify-center items-center w-full">
+          <Image
+            src={"/single-product/example-product.png"}
+            alt="produto"
+            height={200}
+            width={240}
+          />
         </div>
         <div className="flex flex-col w-full gap-1 justify-start">
           <span className="font-bold text-slate-700">Nome</span>
@@ -58,17 +67,8 @@ export default function ProductCreate() {
           <span className="font-bold text-slate-700">Descrição</span>
           <textarea className="bg-slate-300 rounded-3xl w-full outline-none px-3 py-2 text-dark h-24 resize-none" />
         </div>
-        <div className="flex flex-col w-full gap-1 justify-start md:w-1/5">
-          <span className="font-bold text-slate-700">Upload imagem</span>
-          <input
-            type="file"
-            accept="image/*"
-            className="bg-slate-300 rounded-3xl w-full outline-none px-3 py-1 text-dark"
-          />
-        </div>
-        <div className="flex justify-between items-center w-full md:w-1/3">
-          <ButtonGradient buttonText="Criar" />
-          <ButtonGradient buttonText="Cancelar" />
+        <div className="flex justify-center items-center w-full md:w-1/4">
+          <ButtonGradient buttonText="Fechar" />
         </div>
       </form>
     </div>
