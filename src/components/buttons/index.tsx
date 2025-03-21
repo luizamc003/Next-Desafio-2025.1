@@ -2,6 +2,7 @@ import {
   VisibilityOutlined,
   EditOutlined,
   DeleteOutlineOutlined,
+  HomeOutlined,
 } from "@mui/icons-material";
 import Link from "next/link";
 
@@ -40,6 +41,18 @@ export function ViewButton({ id }: { id: number }) {
   return (
     <Link href={`/admin/manage/view?${id}`}>
       <VisibilityOutlined />
+    </Link>
+  );
+}
+
+export default function RedirectHomeAdmin() {
+  return (
+    <Link
+      href={"/admin"}
+      className="md:flex md:justify-center md:items-center text-base md:flex-row gap-1 text-slate-500"
+    >
+      <HomeOutlined className="md:text-2xl" />
+      <span>Home</span>
     </Link>
   );
 }

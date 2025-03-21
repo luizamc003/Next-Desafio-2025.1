@@ -1,4 +1,4 @@
-import { ButtonGradient } from "@/components/buttons";
+import RedirectHomeAdmin, { ButtonGradient } from "@/components/buttons";
 import Link from "next/link";
 import { HomeOutlined } from "@mui/icons-material";
 import Image from "next/image";
@@ -10,13 +10,7 @@ export default function ProductView() {
         {" "}
         <div className="w-full flex justify-between border-b-2 py-2 border-slate-400 items-center text-slate-700 font-bold text-3xl">
           <span>Criar</span>
-          <Link
-            href={"/admin"}
-            className="md:flex md:justify-center md:items-center text-base md:flex-row gap-1 text-slate-500"
-          >
-            <HomeOutlined className="md:text-2xl" />
-            <span>Home</span>
-          </Link>
+          <RedirectHomeAdmin />
         </div>
         <div className="flex justify-center items-center w-full">
           <Image
