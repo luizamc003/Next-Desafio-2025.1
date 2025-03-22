@@ -1,4 +1,7 @@
-import RedirectHomeAdmin, { ButtonGradient } from "@/components/buttons";
+import RedirectHomeAdmin, {
+  ButtonGradient,
+  ButtonGradientCancel,
+} from "@/components/buttons";
 import Link from "next/link";
 import { HomeOutlined } from "@mui/icons-material";
 import Image from "next/image";
@@ -62,7 +65,7 @@ export default function ProductView() {
           <textarea className="bg-slate-300 rounded-3xl w-full outline-none px-3 py-2 text-dark h-24 resize-none" />
         </div>
         <div className="flex justify-center items-center w-full md:w-1/4">
-          <ButtonGradient buttonText="Fechar" />
+          <ButtonGradientCancel buttonText="Fechar" route="/admin" />
         </div>
       </form>
     </div>

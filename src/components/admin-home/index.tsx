@@ -35,7 +35,7 @@ export default function Admin() {
                 Gerenciamento
               </span>
               <div className="flex justify-end items-center gap-2 md:justify-end w-full text-end">
-                <Link href={"/admin"}>
+                <Link href={"/admin/manage/topbar"}>
                   <SellOutlined className="text-slate-700" />
                 </Link>
                 <Link
