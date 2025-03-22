@@ -12,8 +12,17 @@ datasource db {
 
 model Product {
   id          Int       @id @default(autoincrement())
-  title        String
+  name        String
   description String?
-  price       Float
-  createdAt   DateTime  @default(now())
+  cash_price       Float
+  installment_price Float
+  installment_cout Int
+  image String
+  categories Category[]
+}
+
+model Category {
+  id Int @id @default(autoincrement())
+  name String @unique
+  products Product[]
 }

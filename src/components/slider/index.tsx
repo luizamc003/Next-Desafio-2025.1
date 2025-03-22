@@ -6,10 +6,16 @@ const ClientSlider = dynamic(() => import("./client-slider"), {
   ssr: false,
 });
 
-export default function Slider() {
+import { Product } from "../../../types/data";
+
+type SliderProductsProps = {
+  products: Product[];
+};
+
+export default function Slider({ products }: SliderProductsProps) {
   return (
     <div className="py-8 ">
-      <ClientSlider />
+      <ClientSlider products={products} />
     </div>
   );
 }
