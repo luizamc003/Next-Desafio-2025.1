@@ -6,22 +6,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import SingleProduct from "@/components/single-product";
-import { CSSProperties } from "react";
 
 // Import Swiper styles
 import "swiper/css";
 
 import "../style.css";
+import { Product } from "../../../../types/data";
 
-export default function ClientSlider() {
-  const data = [
-    { id: 1, product: <SingleProduct /> },
-    { id: 2, product: <SingleProduct /> },
-    { id: 3, product: <SingleProduct /> },
-    { id: 4, product: <SingleProduct /> },
-    { id: 5, product: <SingleProduct /> },
-  ];
+type ProductsProps = {
+  products: Product[];
+};
 
+export default function ClientSlider({ products }: ProductsProps) {
   return (
     <div className="w-full flex justify-center h-fit">
       <div className="w-full lg:w-[90%] flex justify-center items-center lg:h-[500px]">
@@ -36,8 +32,10 @@ export default function ClientSlider() {
             760: { slidesPerView: 3 },
           }}
         >
-          {data.map((item) => (
-            <SwiperSlide key={item.id}>{item.product}</SwiperSlide>
+          {products.map((productmap, index) => (
+            <SwiperSlide key={index}>
+              <SingleProduct singleproduct={productmap} />
+            </SwiperSlide>
           ))}
         </Swiper>
       </div>

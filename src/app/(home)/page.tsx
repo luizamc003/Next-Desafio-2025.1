@@ -8,10 +8,12 @@ import Swiper from "swiper";
 import { register } from "swiper/element/bundle";
 import TitleSlider from "@/components/slider/title-slider";
 import Image from "next/image";
+import getSliderProducts from "../../../actions/home/action";
 
 register();
 
-export default function Home() {
+export default async function Home() {
+  const product = await getSliderProducts();
   return (
     <div>
       <HeroSection /> <InformationBar />{" "}
@@ -19,10 +21,10 @@ export default function Home() {
         <span className="font-semibold text-2xl px-4 flex justify-center iemns-center">
           NOSSOS PRODUTOS
         </span>
-        <Slider />
+        <Slider products={product} />
         <TitleSlider title="TITULO" />
         <div className="w-full">
-          <Slider />
+          <Slider products={product} />
         </div>
         <div className="w-full flex justify-center items-center pb-4">
           <span className="font-semibold md:text-3xl text-2xl">
@@ -52,7 +54,7 @@ export default function Home() {
         </div>
         <TitleSlider title="TITULO" />
         <div className="w-full">
-          <Slider />
+          <Slider products={product} />
         </div>
       </div>
       <Newsletter />
