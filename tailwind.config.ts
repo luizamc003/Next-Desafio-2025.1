@@ -8,10 +8,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      // tamanhos de screen
+      screens: {
+        md: "768px",
+        lg: "1280px",
+        xl: "1920px",
+        "2x1": "2560px",
+        "3x1": "3440px",
+      },
+      colors: {
+        "primary-pink": "#D35071", // primary-pink
+        "secondary-pink": "#F49CBB", // secondary-pink
+        danger: "#880D1E", // red
+        dark: {
+          DEFAULT: "#212121", // dark
+          light: "#424242", // lighter shade of dark
+          lighter: "#616161", // even lighter shade of dark
+        },
+        gray: "#828282", // light
+        white: "#F5F5F5",
       },
     },
   },

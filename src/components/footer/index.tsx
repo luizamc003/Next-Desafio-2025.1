@@ -1,0 +1,89 @@
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Footer() {
+  return (
+    <div className="flex flex-col w-full md:justify-center border-t-4 items-center border-secondary-pink  text-gray text-base text-center md:text-start">
+      <div className="flex justify-between items-start w-full md:max-w-[1440px] md:px-8 py-1 ">
+        <div className="w-full flex flex-col md:flex-row md:justify-between py-5 m-auto md:gap-10">
+          <div className="flex w-full flex-col md:pb-0 flex-1">
+            <h1 className="font-semibold pb-4 text-dark">SOCIAL</h1>
+            <div className="flex flex-col gap-2">
+              <a href="">Facebook</a>
+              <a href="">Instagram</a>
+              <a href="">Twitter</a>
+            </div>
+            <div className="flex w-full flex-col justify-center items-center md:items-start md:pb-0">
+              <h1 className="font-semibold pb-4 mt-4 text-dark">
+                FORMAS DE PAGAMENTO
+              </h1>
+              <Image
+                src="/footer/bandeiras-cartoes-credito.webp"
+                alt="pagamento"
+                loading="lazy"
+                width={202}
+                height={56}
+                className="w-[202px]"
+              />
+            </div>
+          </div>
+
+          <Link href={"/"}>
+            <div className="flex justify-center items-center ">
+              <Image
+                src="/logo/beleza-express-logo.png"
+                alt="logo"
+                width={356}
+                height={200}
+              />
+            </div>
+          </Link>
+
+          <div className="flex w-full flex-col md:pb-0 flex-1 md:text-end">
+            <div className="flex md:items-end flex-col">
+              <h1 className="font-semibold pb-4 text-dark">
+                ATENDIMENTO AO CLIENTE
+              </h1>
+              <div className="flex flex-col flex-end gap-2 mb-4">
+                <p>email@hotmail.com</p>
+                <p>(32) 9150-1320</p>
+                <p>Fale Conosco</p>
+                <p>
+                  R. Duque de Caxias, 115 <br /> Poço Rico, Juiz de Fora - MG{" "}
+                  <br />
+                  36020-280, Brasil
+                </p>
+              </div>
+              <div className="flex flex-col justify-center gap-4 pb-5 md:pb-0 md:border-none md:justify-center ">
+                <p className="font-semibold text-dark">SEGURANÇA</p>
+                <div className="flex gap-2 md:gap-5 items-center justify-center md:justify-end">
+                  <Image
+                    src="/footer/google_site_seguro.png"
+                    alt="google"
+                    width={357}
+                    height={141}
+                    className="h-[56px] w-auto"
+                  />
+                  <Image
+                    src="/footer/selo_ssl.png"
+                    alt="seguranca"
+                    width={82}
+                    height={36}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full">
+        <div className="flex justify-center items-center md:flex-row py-1 bg-secondary-pink">
+          <p className="text-center order-3 md:order-1 text-danger w-full">
+            © Beleza Express - Todos direitos reservados
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
