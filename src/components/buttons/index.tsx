@@ -15,14 +15,19 @@ interface ButtonGradientCancelProps {
   route: string;
 }
 
-export function ButtonGradient({ buttonText }: ButtonGradientProps) {
-  return (
+export function ButtonGradient({
+  buttonText,
+  link,
+}: ButtonGradientProps & { link?: string }) {
+  const content = (
     <div className="flex items-center justify-center py-2 sm:py-3 w-full">
       <button className="bg-primary-pink text-white font-semibold px-8 py-2  md:px-9 md:py-2 sm:py-2 rounded text-base sm:text-base  transition duration-300 ease-in-out transform hover:bg-gradient-to-r hover:from-primary-pink hover:to-secondary-pink hover:scale-105">
         {buttonText}
       </button>
     </div>
   );
+
+  return link ? <Link href={link}>{content}</Link> : content;
 }
 
 export function ButtonGradientCancel({

@@ -4,13 +4,13 @@ const prisma = new PrismaClient();
 
 async function main() {
   // Criação das categorias
-  // const categories = [{ name: "Sombra" }, { name: "Base" }, { name: "Blush" }];
+  const categories = [{ name: "Sombra" }, { name: "Base" }, { name: "Blush" }];
 
-  // for (const category of categories) {
-  //   await prisma.category.create({
-  //     data: category,
-  //   });
-  // }
+  for (const category of categories) {
+    await prisma.category.create({
+      data: category,
+    });
+  }
 
   // Criação dos produtos com associação às categorias
   const products = [

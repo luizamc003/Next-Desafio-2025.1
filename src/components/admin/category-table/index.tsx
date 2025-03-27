@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -5,8 +7,14 @@ import {
   ArrowBack,
   AddBoxOutlined,
 } from "@mui/icons-material";
+import { Category } from "@prisma/client";
+import { deleteCategory } from "../../../../actions/admin/categories/actions";
 
-export default function CategoryTable() {
+export default function CategoryTable({
+  categories,
+}: {
+  categories: Category[];
+}) {
   return (
     <div className="flex justify-center items-center py-10">
       <div className="flex justify-center items-center flex-col bg-[#FFFFFF] w-[95%] px-5 py-10 md:w-[60%] rounded-3xl ">
@@ -26,16 +34,28 @@ export default function CategoryTable() {
           </div>
         </div>
         <div className="w-full md:w-[98%] flex justify-center items-center flex-col">
-          <div className="w-full flex justify-between items-center py-3 ">
-            <span className="w-1/3 text-center text-dark-light">Maquiagem</span>
-            <span className="  w-1/3 text-center text-dark-light">1</span>
-            <div className="w-1/3 flex flex-row justify-center items-center text-dark-light">
-              <button>
-                <DeleteOutlineOutlined />
-                <span>Deletar</span>
+          {categories.map((category) => (
+            <div
+              key={category.id}
+              className="w-full flex justify-between items-center py-3"
+            >
+              <span className="w-1/3 text-center text-dark-light">
+                {category.name}
+              </span>
+              <span className="w-1/3 text-center text-dark-light">
+                {category.id}
+              </span>
+              <button
+                onClick={async () => {
+                  await deleteCategory(category.id);
+                  window.location.reload();
+                }}
+                className="w-1/3 flex flex-row justify-center items-center text-dark-light"
+              >
+                Delete
               </button>
             </div>
-          </div>
+          ))}
         </div>
         <Link
           href="/admin"
