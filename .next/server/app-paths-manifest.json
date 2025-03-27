@@ -1,7 +1,7 @@
 {
-  "/(home)/page": "app/(home)/page.js",
-  "/(home)/posts/page": "app/(home)/posts/page.js",
   "/admin/page": "app/admin/page.js",
   "/admin/manage/category/page": "app/admin/manage/category/page.js",
-  "/admin/manage/category/create-category/page": "app/admin/manage/category/create-category/page.js"
+  "/admin/manage/category/create-category/page": "app/admin/manage/category/create-category/page.js",
+  "/admin/manage/product/create/page": "app/admin/manage/product/create/page.js",
+  "/admin/manage/product/delete/[id]/page": "app/admin/manage/product/delete/[id]/page.js"
 }

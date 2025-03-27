@@ -55,7 +55,7 @@ export function EditButton({ id }: { id: number }) {
 
 export function DeleteButton({ id }: { id: number }) {
   return (
-    <Link href={`/admin/manage/delete?${id}`}>
+    <Link href={`/admin/manage/product/delete/${id}`}>
       <DeleteOutlineOutlined />
     </Link>
   );

@@ -45,6 +45,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/admin/manage/category/create-category/page.js"
+    ],
+    "/admin/manage/product/create/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/manage/product/create/page.js"
+    ],
+    "/admin/manage/product/delete/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/manage/product/delete/[id]/page.js"
     ]
   }
 }

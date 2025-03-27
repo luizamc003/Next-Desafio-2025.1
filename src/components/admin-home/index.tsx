@@ -6,8 +6,15 @@ import {
   CategoryOutlined,
 } from "@mui/icons-material";
 import AdminTable from "./admin-table";
+import { Product } from "@prisma/client";
 
-export default function Admin() {
+export default function Admin({
+  products,
+  count,
+}: {
+  products: Product[];
+  count: number;
+}) {
   return (
     <div className="flex justify-center items-center py-10">
       <div className="flex justify-center items-center flex-col bg-[#FFFFFF] w-[95%] px-5 py-10 md:w-[90%] lg:[85%] rounded-3xl ">
@@ -49,7 +56,7 @@ export default function Admin() {
             </div>
           </div>
         </div>
-        <AdminTable />
+        <AdminTable products={products} count={count} />
       </div>
     </div>
   );

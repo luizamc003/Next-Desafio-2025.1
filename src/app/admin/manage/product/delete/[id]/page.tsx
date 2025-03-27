@@ -1,6 +1,10 @@
+"use client";
+
+import { useParams } from "next/navigation";
 import DeleteProduct from "@/components/admin/product-delete";
-import ProductEdit from "@/components/admin/product-edit";
 
 export default function Page() {
-  return <DeleteProduct />;
+  const { id } = useParams(); // Captura o parâmetro dinâmico "id"
+
+  return <DeleteProduct id={Number(id)} />;
 }
