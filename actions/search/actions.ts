@@ -1,4 +1,4 @@
-const itemsPerPage = 24;
+const itemsPerPage = 10;
 import prisma from "@/lib/db";
 
 export async function fetchFilteredProducts(

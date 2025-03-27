@@ -4,6 +4,7 @@ import SingleProduct from "../single-product";
 import NewsletterSection from "../newsletter-section";
 import Search from "./search";
 import { Product } from "../../../types/data";
+import Pagination from "../pagination";
 
 export default async function Posts({
   products,
@@ -34,8 +35,8 @@ export default async function Posts({
             <SingleProduct key={index} singleproduct={product} />
           ))}
         </div>
-        {/* {totalPages > 1 && <Pagination />} */}
       </div>
+      {totalPages > 1 && <Pagination totalPages={totalPages} />}
       <NewsletterSection />
     </div>
   );
