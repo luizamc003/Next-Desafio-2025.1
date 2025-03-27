@@ -3,8 +3,17 @@ import TopNavegation from "../top-navegation";
 import SingleProduct from "../single-product";
 import NewsletterSection from "../newsletter-section";
 import Search from "./search";
+import { Product } from "../../../types/data";
 
-export default function Posts() {
+export default async function Posts({
+  products,
+  count,
+  totalPages,
+}: {
+  products: Product[];
+  count: number;
+  totalPages: number;
+}) {
   const linksProducts = [
     { name: "Home", href: "/" },
     { name: "Produtos", href: "/posts" },
@@ -21,17 +30,11 @@ export default function Posts() {
       </div>
       <div className="col-span-full flex justify-center py-5">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
-          <SingleProduct />
+          {products.map((product, index) => (
+            <SingleProduct key={index} singleproduct={product} />
+          ))}
         </div>
+        {/* {totalPages > 1 && <Pagination />} */}
       </div>
       <NewsletterSection />
     </div>
