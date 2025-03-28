@@ -50,3 +50,13 @@ export async function createCategory(formData: FormData) {
   });
   redirect("/admin/manage/category");
 }
+
+export async function fetchCategoryById(id?: number) {
+  const category = prisma.product.findUnique({
+    where: { id },
+    select: {
+      name: true,
+    },
+  });
+  return category;
+}
