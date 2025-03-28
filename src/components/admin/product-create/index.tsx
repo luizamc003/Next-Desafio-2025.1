@@ -87,10 +87,10 @@ export default function ProductCreate() {
         </div>
         <div className="flex flex-col w-full gap-1 justify-start">
           <span className="font-bold text-slate-700">Descrição</span>
-          <input
-            type="text"
+          <textarea
             name="description"
             className="bg-slate-300 rounded-3xl w-full outline-none px-3 py-2 text-dark h-24 resize-none"
+            style={{ verticalAlign: "top" }}
           />
         </div>
         <div className="flex flex-col w-full gap-1 justify-start md:w-1/5">

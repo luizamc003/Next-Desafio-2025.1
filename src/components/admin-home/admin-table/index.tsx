@@ -60,7 +60,9 @@ export default function AdminTable({
             {product.id}
           </span>
           <span className="hidden md:block md:w-[14%] md:text-center text-dark-light">
-            {product.description}
+            {product.description && product.description.length > 50
+              ? `${product.description.slice(0, 70)}...`
+              : product.description || ""}
           </span>
           <span className="w-[34%] md:w-[10%] text-center text-dark-light flex flex-col justify-center items-center">
             <span>{product.cash_price}</span>

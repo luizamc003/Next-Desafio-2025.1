@@ -1,8 +1,7 @@
 {
-  "/admin/page": "app/admin/page.js",
-  "/admin/manage/product/create/page": "app/admin/manage/product/create/page.js",
-  "/(home)/login/page": "app/(home)/login/page.js",
-  "/(home)/posts/page": "app/(home)/posts/page.js",
   "/(home)/product/[id]/page": "app/(home)/product/[id]/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/(home)/posts/page": "app/(home)/posts/page.js",
+  "/(home)/contact/page": "app/(home)/contact/page.js",
   "/(home)/page": "app/(home)/page.js"
 }

@@ -15,7 +15,7 @@ export default function Contact() {
   ];
 
   return (
-    <div>
+    <div className="min-h-screen">
       <TopNavegation links={linksContact} />
       <h1 className="  text-3xl text-dark font-bold text-center">Contato</h1>
       <div className="flex justify-center items-center py-7">

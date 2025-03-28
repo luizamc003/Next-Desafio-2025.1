@@ -22,7 +22,7 @@ export default async function Home() {
           NOSSOS PRODUTOS
         </span>
         <Slider products={product} />
-        <TitleSlider title="TITULO" />
+        <TitleSlider title="MAQUIAGENS PARA VOCÊ" />
         <div className="w-full">
           <Slider products={product} />
         </div>
@@ -52,7 +52,7 @@ export default async function Home() {
             height={238}
           />
         </div>
-        <TitleSlider title="TITULO" />
+        <TitleSlider title="VOCÊ PODE GOSTAR" />
         <div className="w-full">
           <Slider products={product} />
         </div>

@@ -43,7 +43,7 @@ export default async function ProductPage({
               <div className="flex flex-col gap-2">
                 <div className="flex flex-row items-center gap-2">
                   <span className="text-dark font-bold text-lg">
-                    {product?.cash_price}
+                    {product?.cash_price?.toFixed(2)}
                   </span>
                   <span>à vista</span>
                 </div>

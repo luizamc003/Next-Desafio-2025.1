@@ -24,7 +24,7 @@ export default function SingleProduct({ singleproduct }: ProductProps) {
             {singleproduct.name}
           </span>
           <span className="font-semibold text-danger text-base sm:text-lg">
-            R$ {singleproduct.cash_price}
+            R$ {singleproduct.cash_price?.toFixed(2)}
           </span>
           <span className="text-gray text-xs sm:text-sm">
             ou R${singleproduct.installment_price} em{" "}
@@ -36,7 +36,7 @@ export default function SingleProduct({ singleproduct }: ProductProps) {
             no cartão
           </span>
           <p className="py-2 sm:py-4 text-xs sm:text-sm">
-            {singleproduct.description}
+            {(singleproduct.description ?? "").slice(0, 80)}...
           </p>
         </div>
         <div className="flex items-center justify-center py-2 sm:py-3">

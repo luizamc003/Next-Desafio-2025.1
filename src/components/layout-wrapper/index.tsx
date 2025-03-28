@@ -13,7 +13,9 @@ export default function LayoutWrapper({
   return (
     <>
       {children}
-      {pathname !== "/login" && <Footer />}
+      <div style={{ height: pathname === "/login" ? "0px" : "auto" }}>
+        {pathname !== "/login" && <Footer />}
+      </div>
     </>
   );
 }

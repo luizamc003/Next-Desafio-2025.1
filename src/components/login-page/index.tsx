@@ -4,7 +4,7 @@ import { HomeOutlined } from "@mui/icons-material";
 
 export default function Login() {
   return (
-    <div className="flex justify-center items-center bg-gradient-to-tr from-primary-pink to-secondary-pink py-10">
+    <div className="pb-48 flex justify-center items-center bg-gradient-to-tr from-primary-pink to-secondary-pink py-10">
       <div className="flex justify-center items-center flex-col bg-[#FFFFFF] w-[75%] px-5 py-10 rounded-3xl md:w-[45%]">
         <Image
           src="/logo/beleza-express-logo.png"

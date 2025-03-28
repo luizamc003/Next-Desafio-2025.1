@@ -1,33 +1,40 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+interface Value {
+  title: string;
+  description: string;
+}
+
 export default function ValuesContainer() {
+  const [values, setValues] = useState<Value[]>([]);
+
+  useEffect(() => {
+    async function fetchValues() {
+      try {
+        const response = await fetch("/api/values");
+        const data = await response.json();
+        setValues(data);
+      } catch (error) {
+        console.error("Erro ao buscar os valores:", error);
+      }
+    }
+
+    fetchValues();
+  }, []);
+
   return (
     <div className="flex justify-center items-center flex-col gap-10 md:gap-40 md:flex-row pb-4">
-      <div className="flex flex-col justify-center bg-[#f49cbb63] p-4 rounded-[50px] gap-4 shadow-lg w-80">
-        <span className="text-2xl mb-2 text-center">Missão</span>
-        <span className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras erat
-          nisi, aliquet a nisi nec, ultricies ultrices lacus. Maecenas sagittis
-          sem nec laoreet hendrerit. Cras porta viverra hendrerit. Fusce
-          ultrices tincidunt dolor sit amet tempo
-        </span>
-      </div>
-      <div className="flex flex-col justify-center bg-[#f49cbb63] p-4 rounded-[50px] gap-4 shadow-lg w-80">
-        <span className="text-2xl mb-2 text-center">Missão</span>
-        <span className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras erat
-          nisi, aliquet a nisi nec, ultricies ultrices lacus. Maecenas sagittis
-          sem nec laoreet hendrerit. Cras porta viverra hendrerit. Fusce
-          ultrices tincidunt dolor sit amet tempo
-        </span>
-      </div>
-      <div className="flex flex-col justify-center bg-[#f49cbb63] p-4 rounded-[50px] gap-4 shadow-lg w-80">
-        <span className="text-2xl mb-2 text-center">Missão</span>
-        <span className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras erat
-          nisi, aliquet a nisi nec, ultricies ultrices lacus. Maecenas sagittis
-          sem nec laoreet hendrerit. Cras porta viverra hendrerit. Fusce
-          ultrices tincidunt dolor sit amet tempo
-        </span>
-      </div>
+      {values.map((value, index) => (
+        <div
+          key={index}
+          className="flex flex-col justify-center bg-[#f49cbb63] p-4 rounded-[50px] gap-4 shadow-lg w-80 h-80"
+        >
+          <span className="text-2xl mb-2 text-center">{value.title}</span>
+          <span className="text-center">{value.description}</span>
+        </div>
+      ))}
     </div>
   );
 }

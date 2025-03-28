@@ -11,16 +11,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(home)/layout.js"
     ],
-    "/(home)/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(home)/page.js"
-    ],
-    "/(home)/posts/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(home)/posts/page.js"
-    ],
     "/(home)/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -36,35 +26,45 @@
       "static/chunks/main-app.js",
       "static/chunks/app/admin/page.js"
     ],
-    "/admin/manage/product/create/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/admin/manage/product/create/page.js"
-    ],
-    "/admin/manage/product/edit/[id]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/admin/manage/product/edit/[id]/page.js"
-    ],
-    "/admin/manage/product/view/[id]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/admin/manage/product/view/[id]/page.js"
-    ],
     "/admin/manage/product/delete/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/admin/manage/product/delete/[id]/page.js"
+    ],
+    "/admin/manage/product/create/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/manage/product/create/page.js"
     ],
     "/admin/manage/category/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/admin/manage/category/page.js"
     ],
+    "/admin/manage/category/create-category/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/manage/category/create-category/page.js"
+    ],
+    "/(home)/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(home)/page.js"
+    ],
     "/(home)/product/[id]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(home)/product/[id]/page.js"
+    ],
+    "/(home)/posts/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(home)/posts/page.js"
+    ],
+    "/(home)/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(home)/contact/page.js"
     ]
   }
 }
