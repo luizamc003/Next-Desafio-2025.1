@@ -2,3 +2,4 @@ node_modules/
 .next/
 .next/server/
 .next/cache/
+public/assets

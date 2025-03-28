@@ -3,6 +3,8 @@
 import { redirect } from "next/navigation";
 
 import prisma from "@/lib/db";
+import { writeFile } from "fs/promises";
+import { join } from "path";
 
 // model Product {
 //     id          Int       @id @default(autoincrement())
@@ -55,8 +57,18 @@ export async function createProduct(formData: FormData) {
     formData.get("installment_count") as string,
     10
   );
-  const image = formData.get("image") as string;
+  const imageBlob = formData.get("image") as Blob;
 
+  // Save the image to the public/assets directory
+  const imageBuffer = Buffer.from(await imageBlob.arrayBuffer());
+  const imageName = `${Date.now()}-${Math.random()
+    .toString(36)
+    .substring(2)}.png`;
+  const imagePath = join(process.cwd(), "public", "assets", imageName);
+
+  await writeFile(imagePath, imageBuffer);
+
+  // Save the product with the image path
   await prisma.product.create({
     data: {
       name,
@@ -64,8 +76,9 @@ export async function createProduct(formData: FormData) {
       cash_price,
       installment_price,
       installment_cout: installment_count,
-      image,
+      image: `/assets/${imageName}`,
     },
   });
-  redirect("/admin/manage/product");
+
+  redirect("/admin");
 }

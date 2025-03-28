@@ -20,6 +20,20 @@ export async function fetchCategories() {
   return { categories, count };
 }
 
+export async function fetchCategoryNames() {
+  const categories = await prisma.category.findMany({
+    select: {
+      id: true,
+      name: true,
+    },
+    orderBy: {
+      name: "asc",
+    },
+  });
+
+  return categories;
+}
+
 export async function deleteCategory(id: number | undefined) {
   await prisma.category.delete({
     where: { id },
