@@ -47,7 +47,7 @@ export function ButtonGradientCancel({
 
 export function EditButton({ id }: { id: number }) {
   return (
-    <Link href={`/admin/manage/edit?${id}`}>
+    <Link href={`/admin/manage/product/edit/${id}`}>
       <EditOutlined />
     </Link>
   );
@@ -63,7 +63,7 @@ export function DeleteButton({ id }: { id: number }) {
 
 export function ViewButton({ id }: { id: number }) {
   return (
-    <Link href={`/admin/manage/view?${id}`}>
+    <Link href={`/admin/manage/product/view/${id}`}>
       <VisibilityOutlined />
     </Link>
   );
